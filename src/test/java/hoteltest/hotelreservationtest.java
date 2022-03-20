@@ -1,12 +1,11 @@
 package hoteltest;
 
+import org.junit.Test;
 import hotelmain.HotelReservationSystem;
 import hotelmain.Hotel;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
-
-import org.junit.Test;
 
 public class hotelreservationtest {
 	
@@ -16,9 +15,9 @@ public class hotelreservationtest {
 	@Test
 	public void givenHotelDetails_WhenAdded_ShoulReturnTrue() {
 		try {
-			Hotel hotel1 = new Hotel("Lakewood", 1000, 800);
-			Hotel hotel2 = new Hotel("Bridgewood", 2000, 1600);
-			Hotel hotel3 = new Hotel("Ridgewood", 5000, 4500);
+			Hotel hotel1 = new Hotel("Lakewood", 1000, 800, 4);
+			Hotel hotel2 = new Hotel("Bridgewood", 2000, 1600, 3);
+			Hotel hotel3 = new Hotel("Ridgewood", 5000, 4500, 2);
 			HotelReservationSystem hotelReservation = new HotelReservationSystem();
 			hotelReservation.addHotelDetails(hotel1);
 			hotelReservation.addHotelDetails(hotel2);

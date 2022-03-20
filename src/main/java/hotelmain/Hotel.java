@@ -7,13 +7,15 @@ public class Hotel {
 	String hotelName;
 	double regularCustomerRate;
 	double rewardCustomerRate;
+	double rating;
 	
 	//constructor
-	public Hotel(String hotelName, double regularCustomerRate, double rewardCustomerRate) {
+	public Hotel(String hotelName, double regularCustomerRate, double rewardCustomerRate, double rating) {
 		
 		this.hotelName = hotelName;
 		this.regularCustomerRate = regularCustomerRate;
 		this.rewardCustomerRate = rewardCustomerRate;
+		this.rating = rating;
 	}
 	
 	/*
@@ -43,10 +45,18 @@ public class Hotel {
 		this.rewardCustomerRate = rewardCustomerRate;
 	}
 
+	public double getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+
 	@Override
 	public String toString() {
 		return "Hotel [hotelName=" + hotelName + ", regularCustomerRate=" + regularCustomerRate
-				+ ", rewardCustomerRate=" + rewardCustomerRate + "]";
+				+ ", rewardCustomerRate=" + rewardCustomerRate + ", rating=" + rating + "]";
 	}
 	
 }
