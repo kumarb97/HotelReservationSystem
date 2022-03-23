@@ -1,9 +1,9 @@
 /*
- * UC_1 Ability to add hotel
+ * UC_2 To find the cheapest hotel available.
  */
 package hotelmain;
-
 import java.util.Scanner;
+
 public class HotelMain {
 	public static Scanner sc = new Scanner(System.in);
 	
@@ -14,44 +14,28 @@ public class HotelMain {
 	 */
 	public static void main(String[] args) {
 		
-		/*PROCEDURE :
-		 * 1. Creating a class hotel
-		 * 2. Creating a class hotelreservation.
-		 * 3. Creating a class hotelMain to add hotels into hotelreservation system. 
-		 */
-		HotelReservationSystem hotelReservation = new HotelReservationSystem();
-		System.out.println("______________________________________");
-		System.out.println("Welcome to Hotel Reservation System ");
-		System.out.println("______________________________________");
-		System.out.println("\nEnter 0 to Exit");
-		System.out.println("Enter 1 to add Hotel in hotel reservation system ");
-		System.out.println("Enter 2 to see available Hotels");
-		int choice;
-		choice = sc.nextInt();
+		HotelReservationSystem hotelreservation = new HotelReservationSystem();
+		System.out.println("______________");
+		System.out.println("  ADD HOTELS  ");
+		System.out.println("______________");
+		System.out.println("\nHow many hotels do you want to add");
+		int choice1 = sc.nextInt();
+		hotelreservation.addHotel(choice1);
+		
+		System.out.println("________________________________");
+		System.out.println("  WELCOME TO HOTEL RESERVATION  ");
+		System.out.println("________________________________");
+		System.out.println("Enter 1 to see available Hotels");
+		System.out.println("Enter 2 to see cheapest Hotel");
+		int choice = sc.nextInt();
 		switch(choice) {
-		case 1 :
-			System.out.println("How many hotels do you want to add");
-			int choice1 = sc.nextInt();
-			sc.nextLine();
-			for(int i=1;i<=choice1;i++) {
-			System.out.println("Enter Hotel Name");
-			String name = sc.nextLine();
-			sc.nextLine();
-			System.out.println("Enter Rating");
-			double rating1 = sc.nextDouble();
-			System.out.println("Enter Rate for Regular Customer");
-			double regularCustomerRate1 = sc.nextDouble();
-			System.out.println("Enter Rate for Reward Customer");
-			double rewardCustomerRate1 = sc.nextDouble();
-			Hotel hotel = new Hotel(name,regularCustomerRate1,rewardCustomerRate1,rating1);
-			hotelReservation.addHotelDetails(hotel);
-			}
-		case 2 :
-			System.out.println(hotelReservation.getHotelList());
-		default :
-			System.out.println("INVALID INPUT");
+		case 1:
+			hotelreservation.displayHotel();
+		case 2:
+			hotelreservation.findCheapestHotel();
 		}
-	sc.close();
-
-  }
+		
+    }
 }
+
+    

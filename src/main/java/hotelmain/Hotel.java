@@ -4,59 +4,73 @@
 package hotelmain;
 
 public class Hotel {
-	String hotelName;
-	double regularCustomerRate;
-	double rewardCustomerRate;
-	double rating;
-	
-	//constructor
-	public Hotel(String hotelName, double regularCustomerRate, double rewardCustomerRate, double rating) {
-		
-		this.hotelName = hotelName;
-		this.regularCustomerRate = regularCustomerRate;
-		this.rewardCustomerRate = rewardCustomerRate;
-		this.rating = rating;
-	}
-	
-	/*
-	 * Setters and Getters.
-	 */
-	public String getHotelName() {
-		return hotelName;
-	}
+	 private int rating;
+	    private String hotelName;
+	    private double regularWeekDayRate;
+	    private double regularWeekEndRate;
 
-	public void setHotelName(String hotelName) {
-		this.hotelName = hotelName;
-	}
+	    /**
+	     * Creating parameterised constructor
+	     * @param hotelName - name of the hotel
+	     * @param rating - hotel rating
+	     * @param regularWeekDayRate - rate of regular week day
+	     * @param regularWeekEndRate - rate of regular weekend
+	     */
+	    public Hotel(String hotelName, int rating, double regularWeekDayRate, double regularWeekEndRate) {
+	        this.rating = rating;
+	        this.hotelName = hotelName;
+	        this.regularWeekDayRate = regularWeekDayRate;
+	        this.regularWeekEndRate = regularWeekEndRate;
+	    }
 
-	public double getRegularCustomerRate() {
-		return regularCustomerRate;
-	}
+	    /**
+	     * Creating getter and setter methods for all the instances of hotel class
+	     */
 
-	public void setRegularCustomerRate(double regularCustomerRate) {
-		this.regularCustomerRate = regularCustomerRate;
-	}
+	    public int getRating() {
+	        return rating;
+	    }
 
-	public double getRewardCustomerRate() {
-		return rewardCustomerRate;
-	}
+	    public void setRating(int rating) {
+	        this.rating = rating;
+	    }
 
-	public void setRewardCustomerRate(double rewardCustomerRate) {
-		this.rewardCustomerRate = rewardCustomerRate;
-	}
+	    public String getHotelName() {
+	        return hotelName;
+	    }
 
-	public double getRating() {
-		return rating;
-	}
+	    public void setHotelName(String hotelName) {
+	        this.hotelName = hotelName;
+	    }
 
-	public void setRating(int rating) {
-		this.rating = rating;
-	}
+	    public double getRegularWeekDayRate() {
+	        return regularWeekDayRate;
+	    }
 
-	@Override
-	public String toString() {
-		return "Hotel [hotelName=" + hotelName + ", regularCustomerRate=" + regularCustomerRate
-				+ ", rewardCustomerRate=" + rewardCustomerRate + ", rating=" + rating + "]";
-	}
+	    public void setRegularWeekDayRate(double regularWeekDayRate) {
+	        this.regularWeekDayRate = regularWeekDayRate;
+	    }
+
+	    public double getRegularWeekEndRate() {
+	        return regularWeekEndRate;
+	    }
+
+	    public void setRegularWeekEndRate(double regularWeekEndRate) {
+	        this.regularWeekEndRate = regularWeekEndRate;
+	    }
+
+
+	    /**
+	     * Overriding toString method for printing the list in a format
+	     */
+	    @Override
+	    public String toString() {
+	        return "\nHotel{" +
+	                "hotelName=" + hotelName +
+	                ", rating='" + rating + '\'' +
+	                ", regularWeekDayRate=$" + regularWeekDayRate +
+	                ", regularWeekEndRate=$" + regularWeekEndRate +
+	                '}';
+	    }
 	
 }
