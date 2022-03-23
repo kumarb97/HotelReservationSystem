@@ -1,5 +1,5 @@
 /*
- * UC_2 To find the cheapest hotel available.
+ * UC_3 To add weekday and weekend rates.
  */
 package hotelmain;
 import java.util.Scanner;

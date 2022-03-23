@@ -1,5 +1,5 @@
 /*
- * UC1_Ability to add hotel details.
+ * UC3_Ability to add weekday and weekend rates.
  * 
  */
 package hotelmain;
@@ -18,7 +18,7 @@ public class HotelReservationSystem {
     public static Scanner scanner = new Scanner(System.in);
     
     /**
-     * Creating readHotelDetails to add all the details of the hotel into list which are given by user
+     * Creating addHotel to add all the details of the hotel into list which are given by user
      */
     public void addHotel(int choice) {
     	for(int i=1;i<=choice;i++) {
@@ -41,11 +41,16 @@ public class HotelReservationSystem {
     		System.out.println("HOTELS ADDED SUCCESSFULLY");
     	}
     }
-    
+    /**
+     * Method displayHotel shows the hotels stored in arraylist.
+     */
     public void displayHotel() {
     	System.out.println(hotelList);
     }
     
+    /**
+     * Method findCheapestHotel is used to find the cheapest hotel available in arraylist.
+     */
     public void findCheapestHotel() {
     	scanner.nextLine();
     	System.out.println("Enter Booking Date dd/mm/YYYY");

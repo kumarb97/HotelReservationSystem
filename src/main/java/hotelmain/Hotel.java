@@ -1,5 +1,5 @@
 /*
- * UC_1 Ability to add hotel
+ * UC_3 Ability to add weekday and weekend rates.
  */
 package hotelmain;
 
